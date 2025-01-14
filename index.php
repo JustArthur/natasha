@@ -4,16 +4,17 @@
     $DBB = new ConnexionDB();
     $DB = $DBB->DB();
 
-    // Exemple de requête
-    $stmt = $DB->query("SELECT * FROM vehicules");
-    $result = $stmt->fetchAll();
+    $query = "SELECT * FROM vehicules";
+    $stmt = $DB->query($query);
+    $res = $stmt->fetchAll();
 
-    print_r($result);
+    print_r($res);
 
+    $DBB->closeConnection();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,9 +23,31 @@
 
     <title>Document</title>
 </head>
-<body>
-    <form action="" method="POST">
+    <body>
+        <div class="search-container">
+            <h2>Rechercher un utilisateur</h2>
 
-    </form>
-</body>
+            <input type="text" id="customerSearch" onkeyup="filterUsers()" placeholder="Search...">
+
+            <select id="customerSelect" name="customerSelect" onchange="console.log('id select : ' + this.value);">
+                <option value="">-- Sélectionnez un utilisateur --</option>
+                <?php foreach ($res as $user): ?>
+                    <option value="<?= $user['id'] ?>"><?= htmlspecialchars($user['marque']) ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+
+        <script>
+            function filterUsers() {
+                const searchValue = document.getElementById('customerSearch').value.toLowerCase();
+                const options = document.querySelectorAll('#customerSelect option');
+
+                options.forEach(option => {
+                    const text = option.textContent.toLowerCase();
+                    option.style.display = text.includes(searchValue) ? '' : 'none';
+                });
+            }
+        </script>
+    
+    </body>
 </html>
