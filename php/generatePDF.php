@@ -48,7 +48,7 @@
         $_POST['raisonVente'],
         $_POST['delayVente'],
         "", //prix de vente souhaité
-        "cambrai", // A...
+        "", // A...
         $formatter->format(time())
     ];
 
