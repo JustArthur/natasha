@@ -43,11 +43,11 @@
         $resVehicule['couleur'],
         $resVehicule['kilometrage'],
         $resVehicule['date_entretien'],
-        "jour", //jour de visite
+        "", //jour de visite
         $_POST['prixVente'],
         $_POST['raisonVente'],
         $_POST['delayVente'],
-        "prix de vente", //prix de vente souhaité
+        "", //prix de vente souhaité
         "cambrai", // A...
         $formatter->format(time())
     ];
