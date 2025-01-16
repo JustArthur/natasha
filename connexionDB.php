@@ -35,5 +35,9 @@
         public function DB() {
             return $this->pdo;
         }
+
+        public function closeConnection() {
+            $this->pdo = null; // Libérer explicitement la connexion
+        }
     }
 ?>
