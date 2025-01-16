@@ -48,22 +48,38 @@
     ];
 
     //Valeur XY
-    // $importXY = [
-    //     [35,36], //num PDF
-    //     [56, 65], //nom Prenom
-    //     [80, 97], //Num CNI
-    //     [45, 90], //num Tel
-    //     [70, 97], //Immat
-    //     [50, 97], //Model
-    //     [65, 97], //TypeBoite
-    //     [65, 97], //Finition
-    //     [63, 97], //Nbr Mains
-    //     [63, 97], //Origine
-    //     [55, 157], //Frais récent
-    //     [55, 163], //Frais prévoir
-    //     [130, 90], //email
-    //     []
-    // ];
+    $importX = [
+        35,
+        56,
+        70,
+        45,
+        70,
+        50,
+        50,
+        65,
+        63,
+        63,
+        55,
+        55,
+        55,
+        55,
+        130,
+        130,
+        130,
+        130,
+        130,
+        160,
+        137,
+        110,
+        60,
+        82,
+        35,
+        75
+    ];
+
+    $importY = [
+        
+    ];
 
     $pdfNameFile = "mandat_vente_" . $importVarPDF[2];
 
@@ -86,7 +102,7 @@
     //     $i = 0;
     //     $pdf->SetFont('Helvetica');
     //     $pdf->SetTextColor(0, 0, 0);
-    //     $pdf->SetXY($importXY[$i][0]);
+    //     $pdf->SetXY($importX[$i], $importY[$i]);
     //     $pdf->Write(0, $resInfo["marque"]);
     //     $i++;
     // }
