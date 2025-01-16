@@ -1,4 +1,8 @@
 <?php
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
+
     require_once('../vendor/setasign/fpdf/fpdf.php');
     require_once('../vendor/setasign/fpdi/src/autoload.php');
 
@@ -47,7 +51,12 @@
         $formatter->format(time())
     ];
 
-    //Valeur XY
+    //Valeur Y
+    $importY = [
+        
+    ];
+
+    //Valeur X
     $importX = [
         35,
         56,
@@ -75,10 +84,6 @@
         82,
         35,
         75
-    ];
-
-    $importY = [
-        
     ];
 
     $pdfNameFile = "mandat_vente_" . $importVarPDF[2];
