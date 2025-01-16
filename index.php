@@ -21,8 +21,8 @@
                 <h2>Générer un mandat de vente</h2>
                 <form id="form_pdf" action="./php/generatePDF.php" method="POST" target="_blank">
                     <div class="input_box">
-                        <span class="label form_required">Nom du client</span>
-                        <input required type="text" name="customerLastName" id="customerLastName">
+                        <span class="label form_required">Adresse-mail du client</span>
+                        <input required type="email" name="customerLastName" id="customerLastName">
 
                         <p class="text_error error_field_0 hidden">Ce champ est requis</p>
                     </div>
@@ -39,13 +39,6 @@
                             </div>
                             <ul id="carSelect" class="options"></ul>
                         </div>
-                    </div>
-
-                    <div class="input_box">
-                        <span class="label form_required">Immatriculation du véhicule</span>
-                        <input required type="text" name="licensePlateCar" id="licensePlateCar">
-
-                        <p class="text_error error_field_3 hidden">Ce champ est requis</p>
                     </div>
 
                     <div class="input_box">
