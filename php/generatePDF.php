@@ -19,7 +19,7 @@
     $resVehicule->execute([$_POST['immatCar']]);
     $resVehicule = $resVehicule->fetch();
 
-    $resClient = $DB->prepare('SELECT * FROM client WHERE email = ?');
+    $resClient = $DB->prepare('SELECT * FROM clients WHERE email = ?');
     $resClient->execute([$_POST['customerMail']]);
     $resClient = $resClient->fetch();
 
@@ -101,7 +101,7 @@
     $pdf->SetFont('Helvetica');
     $pdf->SetTextColor(0, 0, 0);
     $pdf->SetXY(70, 97);
-    $pdf->Write(0, $importVarPDF[1]);
+    $pdf->Write(0, $_POST['immatCar']);
 
     // foreach($importVarPDF as $valPDF) {
     //     $i = 0;
