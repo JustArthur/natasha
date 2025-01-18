@@ -6,7 +6,7 @@ const wrapper_marque = document.querySelector(".wrapper.marque"),
 let brands = [];
 
 $.ajax({
-    url: './php/getMarques.php',
+    url: './php/getImmat.php',
     type: 'GET',
     success: function(data) {
         brands = JSON.parse(data);

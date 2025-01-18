@@ -24,7 +24,7 @@
                         <span class="label form_required">Adresse-mail du client</span>
                         <input required type="email" name="customerMail" id="customerMail">
 
-                        <p class="text_error error_field_0 hidden">Ce champ est requis</p>
+                        <p class="text_error hidden">Ce champ est requis</p>
                     </div>
 
                     <div class="wrapper marque">
@@ -42,24 +42,63 @@
                     </div>
 
                     <div class="input_box">
-                        <span class="label form_required">Prix de vente sur le marché</span>
-                        <input required type="number" name="prixVente" id="prixVente">
+                        <span class="label form_required">Origine du véhicule</span>
+                        <input required type="text" name="originCar" id="originCar">
 
-                        <p class="text_error error_field_0 hidden">Ce champ est requis</p>
+                        <p class="text_error hidden">Ce champ est requis</p>
+                    </div>
+
+                    <div class="input_box">
+                        <span class="label form_required">Nombre de mains</span>
+                        <input required type="text" name="nbrMains" id="nbrMains">
+
+                        <p class="text_error hidden">Ce champ est requis</p>
+                    </div>
+
+                    <div class="input_box">
+                        <span class="label form_required">Jour de la visite</span>
+                        <input required type="date" max="<?= date('Y-m-d') ?>" name="jourVisite" id="jourVisite">
+
+                        <p class="text_error hidden">Ce champ est requis</p>
                     </div>
 
                     <div class="input_box">
                         <span class="label form_required">Raison de la vente</span>
                         <input required type="text" name="raisonVente" id="raisonVente">
 
-                        <p class="text_error error_field_0 hidden">Ce champ est requis</p>
+                        <p class="text_error hidden">Ce champ est requis</p>
                     </div>
 
                     <div class="input_box">
-                        <span class="label form_required">Delai de vente</span>
-                        <input required type="date" name="delayVente" id="delayVente">
+                        <span class="label form_required">Prix de vente NET souhaité</span>
+                        <input required type="text" name="prixVenteSouhaite" id="inputEuroVenteSouhaite">
 
-                        <p class="text_error error_field_0 hidden">Ce champ est requis</p>
+                        <p class="text_error hidden">Ce champ est requis</p>
+                    </div>
+
+                    <div class="input_box">
+                        <span class="label form_required">Prix de vente constaté sur le marché</span>
+                        <input required type="text" name="prixVente" id="inputEuroPrixVente">
+
+                        <p class="text_error hidden">Ce champ est requis</p>
+                    </div>
+
+                    <div class="input_box delaiVente">
+                        <div class="spanVente">
+                            <span class="label form_required">Delai de vente</span>
+                        </div>
+
+                        <div class="inputSelect">
+                            <input required type="number" min="1" name="delayVenteText" id="delayVenteText">
+    
+                            <select name="delayVenteType" id="delayVenteType">
+                                <option value="Jour(s)">Jour(s)</option>
+                                <option value="Mois">Mois</option>
+                                <option value="An(s)">An(s)</option>
+                            </select>
+                        </div>
+
+                        <p class="text_error hidden">Ce champ est requis</p>
                     </div>
 
                     <div class="input_box">
@@ -72,8 +111,11 @@
             </div>
         </main>
 
-        <script src="./js/SEARCH_SELECT_Marque.js"></script>
+        
+        <script src="./js/selectDaysNumber.js"></script>
+        <script src="./js/spacePrix.js"></script>
+        <script src="./js/SelectImmat.js"></script>
         <script src="./js/error_text.js"></script>
-        <!-- <script src="./js/restorForm.js"></script> -->
+        <!-- <script src="./js/resetForm.js"></script> -->
     </body>
 </html>
