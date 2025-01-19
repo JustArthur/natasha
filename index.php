@@ -116,6 +116,6 @@
         <script src="./js/spacePrix.js"></script>
         <script src="./js/SelectImmat.js"></script>
         <script src="./js/error_text.js"></script>
-        <!-- <script src="./js/resetForm.js"></script> -->
+        <script src="./js/resetForm.js"></script>
     </body>
 </html>
